@@ -19,7 +19,7 @@ module Api
       def create
         @place = Place.new(place_params)
         if @place.save
-          render json: @place, status: :created, location: @place
+          render json: @place, status: :created
         else
           render json: @place.errors, status: :unprocessable_entity
         end
